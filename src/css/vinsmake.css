@@ -1,0 +1,173 @@
+/*-----------------------------------*\
+            FONTS VARIABLE
+    Here we declate the variable of
+    the fonts, just below root you
+    can select the font-face
+
+    You should change the fonts, but not
+    the names, so all components can fix
+    with the new fonts. 
+
+    We use three fonts in every design,
+    1.- Primary (default font, text and
+    subheaders, easy to read)
+    2.- Secondary (headliners)
+    3.- Accent (rarely used, mostly for
+    buttons, tags, dates, links, etc.)
+\*-----------------------------------*/
+
+/* font face */
+@font-face {
+    font-family: 'FontPrimary';
+    src: url('../fonts/.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'FontSecondary';
+    src: url('../fonts/.otf') format('OpenType');
+}
+
+
+:root {
+
+    /* font family */
+    --ff-1: 'FontPrimary';
+    --ff-2: 'FontSecondary';
+
+    /* font weight */
+    --fw-l: light;
+    --fw-n: normal;
+    --fw-b: bold;
+
+    /* font size */
+    --fs-xxs: 1.4rem;
+    --fs-xs: 1.6rem;
+    --fs-s: 1.8rem;
+    --fs-text: 2rem;
+    --fs-l: 2.4rem;
+    --fs-xl: 2.8rem;
+    --fs-xxl: 3.2rem;
+    --fs-xxxl: 3.6rem;
+
+}
+
+@media (max-width: 1024px) {
+    :root {
+        --fs-xxs: 1.3rem;
+        --fs-xs: 1.5rem;
+        --fs-s: 1.7rem;
+        --fs-text: 1.9rem;
+        --fs-l: 2.2rem;
+        --fs-xl: 2.5rem;
+        --fs-xxl: 2.8rem;
+        --fs-xxxl: 3.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --fs-xxs: 1.2rem;
+        --fs-xs: 1.4rem;
+        --fs-s: 1.6rem;
+        --fs-text: 1.8rem;
+        --fs-l: 2rem;
+        --fs-xl: 2.2rem;
+        --fs-xxl: 2.4rem;
+        --fs-xxxl: 2.6rem;
+    }
+}
+
+
+/*-----------------------------------*\
+  #COLORS#
+
+  You should change the colors, but not
+  the names, so all components can fix
+  with the new colors.
+
+  We use four special colors in every
+  design:
+  1.- action (The color of the buttons
+      we want the user to click)
+  2.- accent (The color of the things
+      we want the user to see)
+  3.- detail (rarely used, mostly for
+      data, special part of texts, etc.)
+  4.- effect (If there is a effect in
+      the design, it will have this)
+
+  Finally, we have the background color
+  and text color.
+
+  You can use this box to comment your
+  color palette:
+  
+    --c-background-light: rgb(250, 250, 250);
+    --c-background: rgb(240, 240, 240);
+    --c-background-dark: rgb(230, 230, 230);
+
+    --c-background-neg-light: rgb(50,50,50);
+    --c-background-neg: rgb(40,40,40);
+    --c-background-neg-dark: rgb(30,30,30);
+
+    --c-text: rgb(0, 0, 0);
+    --c-text-neg: rgb(255, 255, 255);
+
+    --c-action: #D37C31;
+    --c-accent: #A67C58;
+    --c-detail: #565656;
+    --c-effect: #cacaca;
+\*-----------------------------------*/
+
+:root {
+    color-scheme: light dark;
+
+    --c-background-l-w: rgb(250, 250, 250);
+    --c-background-l: rgb(240, 240, 240);
+    --c-background-l-b: rgb(230, 230, 230);
+
+    --c-background-d-w: rgb(50,50,50);
+    --c-background-d: rgb(40,40,40);
+    --c-background-d-b: rgb(30,30,30);
+
+    --c-text-l: rgb(0, 0, 0);
+    --c-text-d: rgb(255, 255, 255);
+
+    --c-primary-l: #F08122;
+    --c-secondary-l: #FFC529;
+    --c-accent-l: #426C95;
+}
+
+/*-----------------------------------*\
+            HTML CONFIG
+    Here yoy change the REM size to
+    10px, making easy to do the math
+light-dark
+    the line-height should be 
+    diferent in each front, so you
+    should change it
+\*-----------------------------------*/
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: light-dark(var(--c-background-l), var(--c-background-d));
+    color: light-dark(var(--c-text-l), var(--c-text-d));
+    font-family: var(--ff-1);
+    font-weight: var(--fw-n);
+    font-size: var(--fs-text);
+    overflow-x: hidden;
+    height: auto;
+    min-height: 100vh; /* this is a helper in edition, it could be deleted when design is finished */
+    line-height: 1.5; /* this must change depending on the font used */
+}
+
+/*-----------------------------------*\
+            CUSTOM VARIABLE
+  Here you can put all your custom
+  variables and adit them when you
+  need it. DON'T forget to change
+  your mediaqueries if necesary
+\*-----------------------------------*/
+
