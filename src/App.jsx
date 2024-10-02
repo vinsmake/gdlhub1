@@ -1,7 +1,10 @@
+import './css/normalize.css'
+import './css/vinsmake.css'
+
 export const App = () => {
   return (
   <>
-    <div>GDLHUB</div>
+    <h1>GDLHUB</h1>
   </>
   )
 }
