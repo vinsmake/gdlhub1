@@ -10,7 +10,9 @@ export const AppRouter = () => {
         <>
             <h1>Router</h1>
             <Routes>
+                
                 {
+                    /* Aqui hacemos que, segun si se encuentra autenticado o no, renderice la ruda adecuada. */
                     authentication ? (
                         <Route path="/*" element={<RouterUser />} />
                     ) : (
