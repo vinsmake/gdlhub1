@@ -122,13 +122,13 @@
 :root {
     color-scheme: light dark;
 
-    --c-background-l-w: rgb(250, 250, 250);
     --c-background-l: rgb(240, 240, 240);
-    --c-background-l-b: rgb(230, 230, 230);
+    --c-background-l-primary: rgb(255, 255, 255);
+    --c-background-l-secondary: rgb(225, 225, 225);
 
-    --c-background-d-w: rgb(50,50,50);
-    --c-background-d: rgb(30,30,30);
-    --c-background-d-b: rgb(20,20,20);
+    --c-background-d: rgb(20,20,20);
+    --c-background-d-primary: rgb(30,30,30);
+    --c-background-d-secondary: rgb(40,40,40);
 
     --c-text-l: rgb(0, 0, 0);
     --c-text-d: rgb(255, 255, 255);
