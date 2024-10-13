@@ -123,15 +123,17 @@
     color-scheme: light dark;
 
     --c-background-l: rgb(240, 240, 240);
-    --c-background-l-primary: rgb(255, 255, 255);
-    --c-background-l-secondary: rgb(225, 225, 225);
-
+    --c-background-l-p: rgb(255, 255, 255);
+    --c-background-l-s: rgb(225, 225, 225);
     --c-background-d: rgb(20,20,20);
-    --c-background-d-primary: rgb(30,30,30);
-    --c-background-d-secondary: rgb(40,40,40);
+    --c-background-d-p: rgb(35,35,35);
+    --c-background-d-s: rgb(50,50,50);
+    --c-background-ld: light-dark(var(--c-background-l), var(--c-background-d));
+
 
     --c-text-l: rgb(0, 0, 0);
     --c-text-d: rgb(255, 255, 255);
+    --c-text-ld: light-dark(var(--c-text-l), var(--c-text-d))
 
     --c-primary-l: #F08122;
     --c-secondary-l: #FFC529;
@@ -152,8 +154,8 @@ html {
 }
 
 body {
-    background: light-dark(var(--c-background-l), var(--c-background-d));
-    color: light-dark(var(--c-text-l), var(--c-text-d));
+    background: var(--c-background-ld);
+    color: var(--c-text-ld);
     font-family: var(--ff-1);
     font-weight: var(--fw-n);
     font-size: var(--fs-text);
